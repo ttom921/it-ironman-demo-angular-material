@@ -77,7 +77,7 @@ import { CdkTreeModule } from '@angular/cdk/tree';
     // MatSelectModule,
     // MatSliderModule,
     // MatSlideToggleModule,
-    // MatMenuModule,
+    MatMenuModule,
     MatSidenavModule,
     MatToolbarModule,
     // MatCardModule,

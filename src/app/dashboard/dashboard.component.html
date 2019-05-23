@@ -5,7 +5,7 @@
   <span>多頻道demo</span>
   <!-- 在這之後的都會被推到右邊去 -->
   <span class="toobar-seprator"></span>
-  <button mat-icon-button>
+  <button mat-icon-button [matMenuTriggerFor]="messageMenu" #menuTrigger="matMenuTrigger">
     <mat-icon>message</mat-icon>
   </button>
   <button mat-icon-button>
@@ -84,7 +84,7 @@
   </mat-sidenav> -->
 
   <mat-sidenav-content>
-    <button mat-button (click)="toggleSideNav(sideNav)">切換左邊選單</button>
+    <button mat-raised-button (click)="menuTrigger.toggleMenu()">開啟訊息設定</button>
 
 
 
@@ -92,3 +92,7 @@
   </mat-sidenav-content>
 
 </mat-sidenav-container>
+<mat-menu #messageMenu="matMenu" [overlapTrigger]="false">
+  <button mat-menu-item>最新訊息</button>
+  <button mat-menu-item>訊息設定</button>
+</mat-menu>
